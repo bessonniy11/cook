@@ -9,5 +9,13 @@ export const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full',
+  },  {
+    path: 'details',
+    loadComponent: () => import('./details/details.page').then( m => m.DetailsPage)
   },
+  {
+    path: 'home-defer',
+    loadComponent: () => import('./home-defer/home-defer.page').then( m => m.HomeDeferPage)
+  },
+
 ];
